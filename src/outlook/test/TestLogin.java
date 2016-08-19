@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.MarionetteDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -17,11 +18,17 @@ import java.util.Map;
 
 
 public class TestLogin extends LoginPage{
+
     @Before
     public void openBrowser() throws Exception{
-        DesiredCapabilities capabilities = new DesiredCapabilities().firefox();
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+        try {
+        File file = new File("C:\\Users\\Mihail\\Downloads\\geckodriver-v0.10.0-win64\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
+        driver = new FirefoxDriver();
         driver.get("https://login.live.com");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
