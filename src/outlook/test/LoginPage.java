@@ -4,6 +4,8 @@ package outlook.test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     protected WebDriver driver;
@@ -28,7 +30,13 @@ public class LoginPage {
     public void enterPhone(int phone){
         fieldEmailOrPhone().sendKeys("" + phone);
     }
-//-----page-objects----------
+
+    public void checkAuthorization() {
+        WebDriverWait wait = new WebDriverWait(driver, 10); //seconds
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("basics-module-view-inbox")));
+    }
+
+    //-----page-objects----------
     public WebElement fieldEmailOrPhone(){
         WebElement element = driver.findElement(By.name("loginfmt"));
         return element;

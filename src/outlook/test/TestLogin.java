@@ -35,7 +35,9 @@ public class TestLogin extends LoginPage{
     public void testLoginWithValidEmail(){
         enterEmail(getEmail());
         enterPassword(getPassword());
-        buttonSignIn().click();
+        buttonSignIn().submit();
+        checkAuthorization();
+        driver.quit();
     }
 
     @Test
@@ -60,8 +62,5 @@ public class TestLogin extends LoginPage{
         buttonSignIn().click();
     }
 
-    @After
-    public void closeBrowser(){
-        driver.quit();
-    }
+
 }
