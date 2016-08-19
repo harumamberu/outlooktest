@@ -12,6 +12,7 @@ public class LoginPage {
     private String email;
     private String password;
     private int phone;
+    protected WebDriverWait wait10s;
 
     public LoginPage(){
         this.email = "test.two.dots@outlook.com";
@@ -37,6 +38,21 @@ public class LoginPage {
     }
 
     //-----page-objects----------
+    public WebElement phoneCountryList(){
+        WebElement element = driver.findElement(By.id("phoneCountry"));
+        return element;
+    }
+
+    public WebElement usernameError() {
+        WebElement element = driver.findElement(By.id("usernameError"));
+        return element;
+    }
+
+    public WebElement passwordError() {
+        WebElement element = driver.findElement(By.id("passwordError"));
+        return element;
+    }
+
     public WebElement fieldEmailOrPhone(){
         WebElement element = driver.findElement(By.name("loginfmt"));
         return element;

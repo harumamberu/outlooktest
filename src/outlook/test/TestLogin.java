@@ -1,16 +1,10 @@
 package outlook.test;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
+import org.junit.*;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.MarionetteDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.net.URL;
@@ -22,9 +16,8 @@ public class TestLogin extends LoginPage{
     @Before
     public void openBrowser() throws Exception{
         try {
-        File file = new File("C:\\Users\\Mihail\\Downloads\\geckodriver-v0.10.0-win64\\geckodriver.exe");
-        System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
         driver = new FirefoxDriver();
+        wait10s = new WebDriverWait(driver, 10);
         driver.get("https://login.live.com");
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,11 +30,10 @@ public class TestLogin extends LoginPage{
         enterPassword(getPassword());
         buttonSignIn().submit();
         checkAuthorization();
-        driver.quit();
     }
 
     @Test
-    public void loginWithValidPhone(){
+    public void loginWithInvalidCorrectPhone(){
         enterPhone(getPhone());
         enterPassword(getPassword());
         buttonSignIn().click();
@@ -56,11 +48,21 @@ public class TestLogin extends LoginPage{
 
 
     @Test
-    public void loginInvalidEmail(){
+    public void loginInvalidCorrectEmail(){
         enterEmail("some1here@host.com");
         enterPassword(getPassword());
         buttonSignIn().click();
     }
 
+    @Test
+    public void loginEmptyPassValidEmail() {
+        enterEmail(getEmail());
+        buttonSignIn().click();
+        wait10s.until(ExpectedConditions.visibilityOf(passwordError()));
+    }
 
+    @After
+    public void closeBrowser() {
+        driver.quit();
+    }
 }
