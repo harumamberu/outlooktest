@@ -17,7 +17,7 @@ public class TestLogin extends LoginPage{
     public void openBrowser() throws Exception{
         try {
         driver = new FirefoxDriver();
-        wait10s = new WebDriverWait(driver, 10);
+        wait10s = new WebDriverWait(driver, 5);
         driver.get("https://login.live.com");
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,10 +55,10 @@ public class TestLogin extends LoginPage{
     }
 
     @Test
-    public void loginEmptyPassValidEmail() {
-        enterEmail(getEmail());
+    public void loginEmptyEmailEptyPass() {
         buttonSignIn().click();
         wait10s.until(ExpectedConditions.visibilityOf(passwordError()));
+        wait10s.until(ExpectedConditions.visibilityOf(usernameError()));
     }
 
     @After

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="415c0a63-9342-4832-b0cb-e9257061778c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/cglib-nodep-2.1_3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-codec-1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-exec-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-io-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gson-2.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/guava-19.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/httpclient-4.5.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/httpcore-4.4.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jna-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jna-platform-4.1.0.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/outlook/test/TestLogin.class" afterPath="$PROJECT_DIR$/target/classes/outlook/test/TestLogin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/outlook/test/TestLogin.java" afterPath="$PROJECT_DIR$/src/outlook/test/TestLogin.java" />
     </list>
     <ignored path="MySel20Proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +38,8 @@
       <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/outlook/test/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state relative-caret-position="26">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,13 +50,23 @@
       <file leaf-file-name="TestLogin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/outlook/test/TestLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state relative-caret-position="252">
+              <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1578#1579#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
+                <element signature="e#1617#1618#0" expanded="true" />
+                <element signature="e#1646#1647#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpectedConditions.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1887">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -270,7 +271,7 @@
       <recent name="C:\Projects\outlooktest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestLogin.loginEmptyPassValidEmail">
+  <component name="RunManager" selected="JUnit.TestLogin.loginEmptyEmailEptyPass">
     <configuration default="false" name="TestLogin.testLoginWithValidEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -356,6 +357,32 @@
       <option name="PACKAGE_NAME" value="outlook.test" />
       <option name="MAIN_CLASS_NAME" value="outlook.test.TestLogin" />
       <option name="METHOD_NAME" value="loginEmptyPassValidEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestLogin.loginEmptyEmailEptyPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="outlook.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MySel20Proj" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="outlook.test" />
+      <option name="MAIN_CLASS_NAME" value="outlook.test.TestLogin" />
+      <option name="METHOD_NAME" value="loginEmptyEmailEptyPass" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -619,18 +646,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestLogin.testLoginWithValidEmail" />
       <item index="1" class="java.lang.String" itemvalue="Application.TestLogin" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TestLogin.loginWithValidPhone" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.TestLogin.loginEmptyPassValidEmail" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestLogin.loginEmptyEmailEptyPass" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestLogin.loginEmptyPassValidEmail" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestLogin.loginWithValidPhone" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestLogin.testLoginWithValidEmail" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TestLogin" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestLogin.loginEmptyEmailEptyPass" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestLogin.testLoginWithValidEmail" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestLogin.loginEmptyPassValidEmail" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestLogin.loginWithValidPhone" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -651,14 +680,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestLogin_loginEmptyPassValidEmail - 2016.08.19 at 19h 57m 22s.xml">
-      <configuration name="TestLogin.loginEmptyPassValidEmail" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestLogin_loginEmptyPassValidEmail - 2016.08.19 at 20h 04m 25s.xml">
-      <configuration name="TestLogin.loginEmptyPassValidEmail" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestLogin_loginEmptyPassValidEmail - 2016.08.19 at 20h 06m 50s.xml">
-      <configuration name="TestLogin.loginEmptyPassValidEmail" configurationId="JUnit" />
+    <history-entry file="TestLogin_loginEmptyEmailEptyPass - 2016.08.19 at 20h 42m 16s.xml">
+      <configuration name="TestLogin.loginEmptyEmailEptyPass" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestLogin_loginEmptyPassValidEmail - 2016.08.19 at 20h 08m 46s.xml">
       <configuration name="TestLogin.loginEmptyPassValidEmail" configurationId="JUnit" />
@@ -681,10 +704,16 @@
     <history-entry file="TestLogin_loginEmptyPassValidEmail - 2016.08.19 at 20h 27m 38s.xml">
       <configuration name="TestLogin.loginEmptyPassValidEmail" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestLogin_testLoginWithValidEmail - 2016.08.19 at 20h 34m 40s.xml">
+      <configuration name="TestLogin.testLoginWithValidEmail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestLogin_testLoginWithValidEmail - 2016.08.19 at 20h 36m 23s.xml">
+      <configuration name="TestLogin.testLoginWithValidEmail" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -698,7 +727,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29500756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29500756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -724,7 +753,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/outlook/test/TestLogin.java</url>
+          <line>57</line>
+          <properties class="outlook.test.TestLogin" method="loginEmptyEmailEptyPass" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -756,8 +794,8 @@
           <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1578#1579#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="110" column="28" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/WebDriverWait.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -926,10 +956,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1887">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/outlook/test/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="26">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -938,12 +976,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/outlook/test/TestLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="252">
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1578#1579#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
           </folding>
         </state>
       </provider>
