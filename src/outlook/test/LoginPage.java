@@ -12,7 +12,7 @@ public class LoginPage {
     private String email;
     private String password;
     private int phone;
-    protected WebDriverWait wait10s;
+
 
     public LoginPage(){
         this.email = "test.two.dots@outlook.com";

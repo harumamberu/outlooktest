@@ -1,23 +1,20 @@
 package outlook.test;
 
 import org.junit.*;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.net.URL;
-import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 
 public class TestLogin extends LoginPage{
+    protected WebDriverWait wait10s;
 
     @Before
     public void openBrowser() throws Exception{
         try {
         driver = new FirefoxDriver();
-        wait10s = new WebDriverWait(driver, 5);
         driver.get("https://login.live.com");
         } catch (Exception e) {
             e.printStackTrace();
@@ -33,32 +30,82 @@ public class TestLogin extends LoginPage{
     }
 
     @Test
-    public void loginWithInvalidCorrectPhone(){
-        enterPhone(getPhone());
-        enterPassword(getPassword());
-        buttonSignIn().click();
+    public void testLoginWithEmailAfterWrongPhoneEnter(){
+        testLoginWithInvalidPhone();
+        testLoginWithValidEmail();
     }
 
     @Test
-    public void loginInvalidPassValidMail(){
+    public void testLoginWithInvalidPhone(){
+        enterPhone(getPhone());
+        enterPassword(getPassword());
+        buttonSignIn().click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ExpectedConditions.visibilityOf(phoneCountryList());
+    }
+
+    @Test
+    public void testLoginInvalidPassValidMail(){
         enterPhone(getPhone());
         enterPassword("1234qwER");
         buttonSignIn().click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ExpectedConditions.visibilityOf(usernameError());
     }
 
 
     @Test
-    public void loginInvalidCorrectEmail(){
+    public void testLoginUnregisteredEmail(){
         enterEmail("some1here@host.com");
         enterPassword(getPassword());
         buttonSignIn().click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ExpectedConditions.visibilityOf(usernameError());
     }
 
     @Test
-    public void loginEmptyEmailEptyPass() {
+    public void testLoginEmptyEmailEptyPass() {
         buttonSignIn().click();
+        wait10s = new WebDriverWait(driver, 5);
         wait10s.until(ExpectedConditions.visibilityOf(passwordError()));
+        wait10s = new WebDriverWait(driver, 5);
         wait10s.until(ExpectedConditions.visibilityOf(usernameError()));
+    }
+
+    @Test
+    public void testLoginEmailWithoutAt(){
+        enterEmail("some1herehost.com");
+        enterPassword(getPassword());
+        buttonSignIn().click();
+        wait10s = new WebDriverWait(driver, 5);
+        wait10s.until(ExpectedConditions.visibilityOf(usernameError()));
+    }
+
+    @Test
+    public void testLoginEmailWithTwoAt(){
+        enterEmail("some1here@@host.com");
+        enterPassword(getPassword());
+        buttonSignIn().click();
+        wait10s = new WebDriverWait(driver, 5);
+        wait10s.until(ExpectedConditions.visibilityOf(usernameError()));
+    }
+
+    @Test
+    public void testLoginEmailWithoutHost(){
+        enterEmail("some1here@.com");
+        enterPassword(getPassword());
+        buttonSignIn().click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ExpectedConditions.visibilityOf(usernameError());
+    }
+
+    @Test
+    public void testLoginEmailWithoutDomain(){
+        enterEmail("some1here@host");
+        enterPassword(getPassword());
+        buttonSignIn().click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ExpectedConditions.visibilityOf(usernameError());
     }
 
     @After
